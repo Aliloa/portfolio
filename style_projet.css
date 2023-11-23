@@ -1,0 +1,18 @@
+section {
+    flex-direction: row;
+    gap: 20px;
+    height: 100vh;
+}
+.projet_page {
+    width: 50vw;
+    height: 80vh;
+    border: solid 2px var(--Lemarron);
+    display: flex;
+    flex-direction: column;
+    box-shadow: -4px 4px 0px 0px var(--Lemarron);
+    transition: 0.1s;
+}
+.projet_page:hover {
+    box-shadow: none;
+    transform: translate(-4px, 4px);
+}
