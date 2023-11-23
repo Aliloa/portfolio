@@ -76,11 +76,12 @@ section {
     align-items: center;
 }
 h2 {
-    font-family: 'press start 2p', sans-serif;
+    font-family: 'coda', sans-serif;
     color: var(--Lemarron);
-    text-shadow: 
+    font-size: 2rem;
+    /* text-shadow: 
     -2px -2px 0 white, 2px -2px 0 white, 
-    -2px 2px 0 white, 2px 2px 0 white;
+    -2px 2px 0 white, 2px 2px 0 white; */
 }
 
 /* A RPOPOS 2 */

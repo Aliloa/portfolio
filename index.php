@@ -6,9 +6,11 @@
     <title>Zhyla Alina</title>
     <link rel="stylesheet" type="text/css" href="style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Coda&family=Press+Start+2P&family=Silkscreen&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Coda&family=Courier+Prime&family=Press+Start+2P&family=Saira:wght@500&family=Silkscreen&display=swap" rel="stylesheet">
 
+<!-- notes:
+supprimer les polices inutiles -->
 </head>
 <?php 
 session_start();
