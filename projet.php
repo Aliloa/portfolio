@@ -19,6 +19,33 @@ $stmt=$db->prepare($requete);
 $stmt->execute();
 $result=$stmt->fetch(PDO::FETCH_ASSOC);
 ?>
+    <nav>
+    <div class="burger-menu">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+        <div class="menu-list">
+        <div>
+            <img src="Images/icones/coeur.png" alt="">
+            <a href="#projets">Projets</a>
+        </div>
+        <div>
+            <img src="Images/icones/dessin.png" alt="">
+            <a href="#dessins">Dessins</a>
+        </div>
+<a href="index.php" class="alina">ALINA</a>
+<div>
+    <img src="Images/icones/cv.png" alt="">
+    <a href="">CV</a>
+</div>
+<div>
+    <img src="Images/icones/contact.png" alt="">
+    <a href="#contact">Conatct</a>
+</div>
+        </div>
+        
+    </nav>
     <section>
         <div class="projet_page">
         <div class="haut">
@@ -37,7 +64,7 @@ $result=$stmt->fetch(PDO::FETCH_ASSOC);
         <div class="description">
             <h1><?php echo $result['nom'] ?></h1>
             <p><?php echo $result['description'] ?></p>
-            <a href="index.php#projets">Retour</a>
+            <a href="index.php#projets"><button class="retour">Fermer</button></a>
         </div>
     </section>
 </body>

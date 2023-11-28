@@ -1,3 +1,18 @@
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+:root {
+    --Lemarron: #282828; /* Remplacez cette valeur par la couleur de votre choix */
+    --Lebeige: #f0ebce;
+    --Lejaune: rgb(255 182 0);
+  }
+
+  html {
+    scroll-behavior: smooth;
+}
 section {
     flex-direction: row;
     gap: 20px;
@@ -17,5 +32,8 @@ section {
     transform: translate(-4px, 4px);
 }
 p {
-    font-family: 'Courier Prime', sans-serif;
+    font-family: 'coda', sans-serif;
+}
+a {
+    text-decoration: none;
 }

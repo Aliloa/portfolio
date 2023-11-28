@@ -39,36 +39,83 @@ function afficherLettreParLettre(texte, delai) {
   
     afficherLettre();
   }
-
+  function activerBoutons() {
+    // Réactiver tous les boutons
+    triggers_jeu.forEach(triggers_jeu => triggers_jeu.disabled = false);
+}
 //texte qui s'affiche quand on clique sur un bouton
 function question_click () {
+  triggers_jeu.forEach(triggers_jeu => triggers_jeu.disabled = true);
+  for (let i = 0; i < 7; i++) {
     let image = document.querySelector('.mini_jeu');
+      // Changer le src avec le nouveau chemin d'image pendant 100 millisecondes
+      setTimeout(function() {
+        image.src = 'Images/talk.jpg';
+      }, i * 300); // Augmentez le délai pour chaque itération
+  
+      // Rétablir l'ancien src après 100 millisecondes supplémentaires
+      setTimeout(function() {
+        image.src = 'Images/interview.jpg';
+      }, (i * 300) + 100);
+  }
 
-  // Sauvegarder l'ancien src
-  let ancienSrc = image.src;
-
-  // Changer le src avec le nouveau chemin d'image
-  image.src = 'Images/talk.jpg';
-
-  // Rétablir l'ancien src après 1 seconde
-  setTimeout(function() {
-    image.src = ancienSrc;
-  }, 1000);
 
     if (this.value == "etudes") {
         reponse.innerHTML= "";
         afficherLettreParLettre("Formation académique et apprentissage continu.", 30);
+        setTimeout(activerBoutons, 2000);
     } else if (this.value == "skills") {
         reponse.innerHTML= "";
         afficherLettreParLettre("Compétences techniques et savoir-faire spécifiques.", 30);
+        setTimeout(activerBoutons, 2000);
     } else if (this.value == "projet") {
         reponse.innerHTML= "";
         afficherLettreParLettre("Réalisation de projets concrets pour appliquer les compétences.", 30);
+        setTimeout(activerBoutons, 2000);
     } else if (this.value == "soft") {
         reponse.innerHTML= "";
         afficherLettreParLettre("Compétences interpersonnelles et traits de personnalité.", 30);
+        setTimeout(activerBoutons, 2000);
     }
 
 }
 triggers_jeu.forEach(trigger => trigger.addEventListener('mouseenter',fleche_entre));
 triggers_jeu.forEach(trigger => trigger.addEventListener('click',question_click));
+
+// DESSINS
+
+const suivant = document.querySelector('.suivant');
+const precedent = document.querySelector('.precedent');
+const numero_html = document.querySelector('.preview strong');
+const dessin_img = document.querySelector('.preview img')
+let numero_dessin = 1;
+
+function dessin_suivant () {
+numero_dessin = (numero_dessin % 21) + 1;
+numero_html.innerHTML = numero_dessin;
+dessin_img.src = 'Images/Dessins/' + numero_dessin + '.jpg';
+if (numero_dessin === 7) {
+  dessin_img.src = 'Images/Dessins/7.gif';
+}
+}
+
+function dessin_precedent () {
+  numero_dessin = (numero_dessin === 1) ? 21 : numero_dessin - 1;
+  numero_html.innerHTML = numero_dessin;
+  dessin_img.src = 'Images/Dessins/' + numero_dessin + '.jpg';
+  if (numero_dessin === 7) {
+    dessin_img.src = 'Images/Dessins/7.gif';
+  }
+  }
+
+suivant.addEventListener('click',dessin_suivant);
+precedent.addEventListener('click',dessin_precedent);
+
+// MENU BURGER
+const burgerMenu = document.querySelector('.burger-menu');
+const menuList = document.querySelector('.menu-list');
+
+burgerMenu.addEventListener('click', function () {
+    // Toggle la classe 'show' sur le menu-list
+    menuList.classList.toggle('show');
+});
