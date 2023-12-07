@@ -1,0 +1,88 @@
+:root {
+    --Lemarron: #282828; /* Remplacez cette valeur par la couleur de votre choix */
+    --Lebeige: #f0ebce;
+    --Lejaune: rgb(255 182 0);
+  }
+
+.container {
+    padding: 25px;
+    padding-top: 50px;
+    max-width: 50vw;
+}
+.miniatures {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    width: 100%;
+    margin: auto;
+    gap: 5px;
+    border: solid 4px var(--Lemarron);
+    border-top: none;
+    background-color: var(--Lebeige);
+    padding: 10px;
+}
+.miniature {
+    border: solid 2px var(--Lemarron);
+    width: 100%;
+    height: 30vw;
+    max-height: 120px;
+    max-width: 120px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: -2px 2px 0px 0px var(--Lemarron);
+    transition: 0.1s;
+    padding: 5px;
+    background-color: var(--Lejaune);
+}
+.miniature:hover {
+    box-shadow: none;
+    transform: translate(-2px, 2px);
+}
+.miniature img {
+    border: solid 2px var(--Lemarron);
+}
+.dessins {
+    max-width: 100vw;
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Fond sombre */
+    z-index: 999;
+}
+.carre {
+    padding: 0;
+}
+/* DESSINS */
+.dessinspreview {
+    display: flex;
+    width: 100%;
+    position: relative;
+}
+.haut {
+    border: solid 4px var(--Lemarron);
+}
+.dessinspreview .haut {
+    background-color: var(--Lebeige);
+}
+p {
+     margin: 0;
+     font-family: 'coda', sans-serif;
+     width: 100%;
+     max-width: 120px;
+     padding: 5px;
+    }
+
+.container_miniature {
+    width: 100%;
+     max-width: 120px;
+     margin: auto;
+     text-align: center;
+}
+.carre {
+    background-color: rgba(0, 0, 0, 0);
+}
+.retour {
+    margin-top: 10px;
+}

@@ -82,35 +82,6 @@ function question_click () {
 triggers_jeu.forEach(trigger => trigger.addEventListener('mouseenter',fleche_entre));
 triggers_jeu.forEach(trigger => trigger.addEventListener('click',question_click));
 
-// DESSINS
-
-const suivant = document.querySelector('.suivant');
-const precedent = document.querySelector('.precedent');
-const numero_html = document.querySelector('.preview strong');
-const dessin_img = document.querySelector('.preview img')
-let numero_dessin = 1;
-
-function dessin_suivant () {
-numero_dessin = (numero_dessin % 21) + 1;
-numero_html.innerHTML = numero_dessin;
-dessin_img.src = 'Images/Dessins/' + numero_dessin + '.jpg';
-if (numero_dessin === 7) {
-  dessin_img.src = 'Images/Dessins/7.gif';
-}
-}
-
-function dessin_precedent () {
-  numero_dessin = (numero_dessin === 1) ? 21 : numero_dessin - 1;
-  numero_html.innerHTML = numero_dessin;
-  dessin_img.src = 'Images/Dessins/' + numero_dessin + '.jpg';
-  if (numero_dessin === 7) {
-    dessin_img.src = 'Images/Dessins/7.gif';
-  }
-  }
-
-suivant.addEventListener('click',dessin_suivant);
-precedent.addEventListener('click',dessin_precedent);
-
 // MENU BURGER
 const burgerMenu = document.querySelector('.burger-menu');
 const menuList = document.querySelector('.menu-list');

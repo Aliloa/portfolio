@@ -34,7 +34,7 @@ $tableauResult=$stmt->fetchAll(PDO::FETCH_ASSOC);
         </div>
         <div>
             <img src="Images/icones/dessin.png" alt="">
-            <a href="#dessins">Dessins</a>
+            <a href="dessins.php">Dessins</a>
         </div>
 <a href="index.php" class="alina">ALINA</a>
 <div>
@@ -147,25 +147,12 @@ $tableauResult=$stmt->fetchAll(PDO::FETCH_ASSOC);
 
     </div>
 </section>
-<section id="dessins">
-    <h2>Dessins</h2>
-    <div class="dessinspreview">
-    <div class="dessin dessin_1">
-                <div class="haut">
-                    <h3>Logiciels utilisés</h3>
-                    <div class="carre">-
-                    </div>
-                    <div class="carre">
-                        <div class="fichiera"></div>
-                        <div class="fichierb"></div>
-                    </div>
-                    <div class="carre">X</div>
-                </div>
-                <p>Coeur d'une ville animée, où les lumières scintillent comme des étoiles urbaines, la vie suit son cours effréné. Les rues résonnent du bourdonnement constant</p>
-            </div>
+<section>
+    <h2>Plus sur moi</h2>
+    <div class="autre">
             <div class="dessin dessin_3">
                 <div class="haut">
-                    <h3>Texte</h3>
+                    <h3>Voir_mes_dessins</h3>
                     <div class="carre">-
                     </div>
                     <div class="carre">
@@ -174,25 +161,15 @@ $tableauResult=$stmt->fetchAll(PDO::FETCH_ASSOC);
                     </div>
                     <div class="carre">X</div>
                 </div>
+                <div class="img_texte">
                 <img src="Images/tete.png" alt="">
-            </div>
-        <div class="preview">
-        <div class="haut">
-                    <h3>Tente.jpg</h3>
-                    <div class="carre">-
-                    </div>
-                    <div class="carre">
-                        <div class="fichiera"></div>
-                        <div class="fichierb"></div>
-                    </div>
-                    <div class="carre">X</div>
+                <div>
+                <h3>Mes créations</h3>
+                <p>Coeur d'une ville animée, où les lumières scintillent comme des étoiles urbaines, la vie suit son cours effréné. Les rues résonnent du bourdonnement constant</p>
+                <a href="dessins.php"><button class="retour">Voir mes dessins</button></a>
                 </div>
-            <img src="Images/Dessins/1.jpg" alt=""  class="dessin_image">
-            <button class="precedent"><img src="Images/icones/fleche.png" alt=""></button>
-            <button class="suivant"><img src="Images/icones/fleche.png" alt=""></button>
-            <p><strong>01</strong>/21</p>
-        </div>
-    </div>
+                </div>
+            </div>
 </section>
     </main>
 
